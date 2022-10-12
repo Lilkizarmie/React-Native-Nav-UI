@@ -6,15 +6,14 @@ import {
   StatusBar,
   useColorScheme,
 } from 'react-native';
-import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
+import { Provider } from 'react-native-paper';
 
-import Colors from './constants/Colors';
+import Colors from './src/constants/Colors';
 
-
-import AnimTab1 from './bottomTab/AnimTab1';
-import AnimTab2 from './bottomTab/AnimTab2';
-import AnimTab3 from './bottomTab/AnimTab3';
-import Home from './ButtomTab/Home';
+import AnimTab1 from './BottomTab/AnimTab1';
+import AnimTab2 from './BottomTab/AnimTab2';
+import AnimTab3 from './BottomTab/AnimTab3';
+import Home from './BottomTab/Home';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -44,7 +43,7 @@ const options = {
   headerShown: false,
 }
 
-const Stack = createSharedElementStackNavigator();
+const Stack = createStackNavigator();
 
 const RootStack = () => {
   return (
